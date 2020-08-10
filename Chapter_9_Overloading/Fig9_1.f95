@@ -10,4 +10,6 @@ MODULE generic_sin_in_deg
 
     END INTERFACE
 
+! TEST SOME MORE
+
 END MODULE generic_sin_in_deg

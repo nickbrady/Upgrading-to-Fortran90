@@ -32,4 +32,20 @@ CONTAINS
     sine = SIN (Deg_to_rad_real * x)
   END FUNCTION sin_in_deg_for_real_rank1
 
+  ! Find sine of scalar of type double precision REAL
+
+  FUNCTION sin_in_deg_for_dble_scalar (x) RESULT (sine)
+    REAL(Dble), INTENT(IN)  :: x
+    REAL(Dble)              :: sine
+    sine = SIN(Deg_to_rad_dble * x)
+  END FUNCTION sin_in_deg_for_dble_scalar
+
+  ! Find sine of rank 1 array of type double precision REAL
+
+  FUNCTION sin_in_deg_for_dble_rank1 (x) RESULT (sine)
+    REAL(Dble), DIMENSION(:), INTENT(IN)  :: x
+    REAL(Dble), DIMENSION(SIZE(x))        :: sine
+    sine = SIN(Deg_to_rad_dble * x)
+  END FUNCTION sin_in_deg_for_dble_rank1
+
 END MODULE generic_sin_in_deg

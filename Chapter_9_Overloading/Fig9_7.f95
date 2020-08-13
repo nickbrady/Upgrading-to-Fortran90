@@ -39,5 +39,11 @@ CONTAINS
 
     exponentiate = rat_type(rat%num ** n, rat%denom ** n)
   END FUNCTION exponentiate
-  
+
 END MODULE rational_numbers
+
+
+
+PROGRAM demo_precedence_of_operators
+
+END PROGRAM demo_precedence_of_operators

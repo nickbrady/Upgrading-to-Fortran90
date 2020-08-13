@@ -71,9 +71,11 @@ PROGRAM demo_precedence_of_operators
                                                 ! then .tothepower.       (2/9)^2 = 4/81
   PRINT "(I2, '/', I2)", rat_3
 
+
   number = -(-1./3.) * (2./3.) **2              ! first **,   (2/3)^2 = 4/9
                                                 ! unary -,    -1/3 --> 1/3
   PRINT *, number, 4./27.                       ! then *,     1/3 * 4/9 = 4/27
+
 
   rat_3 = .minus. rat_1 * (rat_2 .tothepower. 2)  ! first .minus. is done, -1/3 --> 1/3
                                                   ! then .tothepower.       (2/3)^2 = 4/9

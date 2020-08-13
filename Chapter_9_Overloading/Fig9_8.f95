@@ -1,0 +1,3 @@
+MODULE struct_array_assignments
+
+END MODULE struct_array_assignments

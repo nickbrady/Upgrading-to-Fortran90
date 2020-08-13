@@ -38,3 +38,23 @@ CONTAINS
   END SUBROUTINE array_to_struct
 
 END MODULE struct_array_assignments
+
+
+PROGRAM demo_defined_assignment
+
+  USE struct_array_assignments    ! Access meanings of = defined in module
+
+  TYPE (point_type)   :: point
+  REAL, DIMENSION(3)  :: x
+
+  point = point_type (1.0, 2.0, 3.0)    ! intrinsic assignment
+
+  x = point                             ! assignment defined by struct_to_array
+
+  PRINT "(3F5.1)", x
+
+  point = 2.0 * x                       ! assignment defined by array_to_struct
+
+  PRINT "(3F5.1)", point
+
+END PROGRAM demo_defined_assignment

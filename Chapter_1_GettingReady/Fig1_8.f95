@@ -1,5 +1,7 @@
 PROGRAM demo_pointer
 
+  IMPLICIT NONE
+
   REAL, DIMENSION(:), POINTER :: p    ! Declare a pointer to a one-dimensional
                                       ! array of type REAL
 

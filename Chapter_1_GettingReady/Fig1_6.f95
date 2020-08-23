@@ -18,3 +18,24 @@ CONTAINS                          ! Indicates subroutine(s) and/or function(s) f
   END FUNCTION identity_matrix
 
 END MODULE identity_matrix_maker
+
+
+
+
+program test_identity_matrix
+
+  USE  identity_matrix_maker            ! Gain access to module function identity_matrix
+
+  IMPLICIT NONE                         ! implicit none is good to include in
+                                        ! every program
+  REAL, DIMENSION(4,4) :: u
+  INTEGER :: i                          ! local loop index
+
+
+  u = 3.0 * identity_matrix(4)          ! invoke module function
+
+  DO i = 1, 4
+    PRINT "(4F5.1)", u(i, 1:4)          ! Display ith row of u
+  END DO
+
+end program test_identity_matrix

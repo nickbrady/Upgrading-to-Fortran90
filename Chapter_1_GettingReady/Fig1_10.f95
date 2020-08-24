@@ -27,10 +27,10 @@ SUBROUTINE external_sub (i)             ! scoping unit 4
   TYPE (derived_type) :: struct         ! scoping unit 4
   struct % n = 3                        ! scoping unit 4
   struct % x = 67.0                     ! scoping unit 4
-
+                                        ! scoping unit 4
   CALL internal_sub                     ! scoping unit 4
   PRINT "(2I3)", n, i                   ! scoping unit 4
-
+                                        ! scoping unit 4
 CONTAINS                                ! scoping unit 4
 
   SUBROUTINE internal_sub               ! scoping unit 3
